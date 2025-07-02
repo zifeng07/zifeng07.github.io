@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合并聊天记录</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .chat-date {
+            text-align: center;
+            font-size: 13.5px;
+            color: #777;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .chat-date::before,
+        .chat-date::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #ccc;
+        }
+        .chat-date::before {
+            left: 0;
+        }
+        .chat-date::after {
+            right: 0;
+        }
+        .message {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            position: relative;
+        }
+        .message::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50px;
+            right: 0;
+            height: 1px;
+            background-color: #e0e0e0;
+        }
+        .message-left, .message-right {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+        }
+        .message-right {
+            justify-content: flex-start;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .message-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .username-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .username {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        .time {
+            font-size: 12px;
+            color: #888;
+            margin-left: auto;
+        }
+        .bubble {
+            white-space: normal;
+            word-break: break-all;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-date">2025年1月1日</div>
+
+    <div class="message message-left">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Avatar" class="avatar">
+        <div class="message-content">
+            <div class="username-time">
+                <div class="username">张三</div>
+                <div class="time">18:30:45</div>
+            </div>
+            <div class="bubble">今天要一起吃饭吗？</div>
+        </div>
+    </div>
+
+    <div class="message message-right">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="User Avatar" class="avatar">
+        <div class="message-content">
+            <div class="username-time">
+                <div class="username">李四</div>
+                <div class="time">18:31:10</div>
+            </div>
+            <div class="bubble">好啊，几点见？</div>
+        </div>
+    </div>
+
+    <div class="message message-left">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Avatar" class="avatar">
+        <div class="message-content">
+            <div class="username-time">
+                <div class="username">张三</div>
+                <div class="time">18:32:25</div>
+            </div>
+            <div class="bubble">六点吧。</div>
+        </div>
+    </div>
+
+    <div class="message message-right">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="User Avatar" class="avatar">
+        <div class="message-content">
+            <div class="username-time">
+                <div class="username">李四</div>
+                <div class="time">18:33:03</div>
+            </div>
+            <div class="bubble">好的，见面聊。</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
